@@ -1,0 +1,110 @@
+﻿<Window
+    x:Class="MvvmlightWpfApp.Views.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:MvvmlightWpfApp.Controls"
+    xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:local="clr-namespace:MvvmlightWpfApp.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Name="MainWindow"
+    Title="MainView"
+    Width="1366"
+    Height="730"
+    MinWidth="1366"
+    MinHeight="730"
+    AllowDrop="True"
+    DataContext="{Binding Main, Source={StaticResource Locator}}"
+    ResizeMode="CanResize"
+    UseLayoutRounding="True"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Normal"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <!--  wpf官方文档解释的配合WindowStyle="None"使用的，否则navpanel有间隙  -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <!--<Grid>-->
+    <!--<Viewbox
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Stretch="Fill">-->
+    <!--<Grid Width="1366" Height="730">-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Controls:NavpanelControl
+            Grid.Row="0"
+            Grid.Column="0"
+            DataContext="{Binding NavpanelControl, Source={StaticResource Locator}}" />
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                Background="{StaticResource PrimaryHueMidBrush}">
+                <ScrollViewer
+                    HorizontalAlignment="Stretch"
+                    HorizontalScrollBarVisibility="Disabled"
+                    VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="Menu" Margin="10" />
+                </ScrollViewer>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1" />
+
+            <StackPanel
+                x:Name="StackPanelMain"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch" />
+
+        </Grid>
+
+        <Controls:BottompanelControl
+            Grid.Row="2"
+            Grid.Column="0"
+            DataContext="{Binding BottompanelControl, Source={StaticResource Locator}}" />
+    </Grid>
+    <!--</Viewbox>-->
+    <!--</Grid>-->
+
+</Window>

@@ -1,0 +1,315 @@
+2020-09-27 10:25:49.2360 INFO OnAppStartup
+2020-09-27 10:25:49.2879 INFO args: 
+2020-09-27 10:26:58.8910 INFO OnAppStartup
+2020-09-27 10:26:58.9309 INFO args: 
+2020-09-27 10:28:14.4238 INFO OnAppStartup
+2020-09-27 10:28:14.4906 INFO args: 
+2020-09-27 10:29:15.1799 INFO OnAppStartup
+2020-09-27 10:29:15.2227 INFO args: 
+2020-09-27 10:30:06.5996 INFO OnAppStartup
+2020-09-27 10:30:06.6475 INFO args: 
+2020-09-27 10:33:06.8903 INFO OnAppStartup
+2020-09-27 10:33:06.9471 INFO args: 
+2020-09-27 10:34:08.7224 INFO OnAppStartup
+2020-09-27 10:34:08.7663 INFO args: 
+2020-09-27 10:35:40.2285 INFO OnAppStartup
+2020-09-27 10:35:40.2773 INFO args: 
+2020-09-27 10:42:53.2044 INFO OnAppStartup
+2020-09-27 10:42:53.2652 INFO args: 
+2020-09-27 10:44:36.4417 INFO OnAppStartup
+2020-09-27 10:44:36.5006 INFO args: 
+2020-09-27 10:48:17.5703 INFO OnAppStartup
+2020-09-27 10:48:17.6232 INFO args: 
+2020-09-27 10:49:25.4960 INFO OnAppStartup
+2020-09-27 10:49:25.5319 INFO args: 
+2020-09-27 11:22:33.0484 INFO OnAppStartup
+2020-09-27 11:22:33.1152 INFO args: 
+2020-09-27 11:24:00.8535 INFO OnAppStartup
+2020-09-27 11:24:00.9154 INFO args: 
+2020-09-27 11:24:53.1789 INFO OnAppStartup
+2020-09-27 11:24:53.2218 INFO args: 
+2020-09-27 11:37:32.5832 INFO OnAppStartup
+2020-09-27 11:37:32.6640 INFO args: 
+2020-09-27 11:41:30.5780 INFO OnAppStartup
+2020-09-27 11:41:30.6149 INFO args: 
+2020-09-27 11:43:12.5311 INFO OnAppStartup
+2020-09-27 11:43:12.5630 INFO args: 
+2020-09-27 11:43:43.3288 INFO OnAppStartup
+2020-09-27 11:43:43.3697 INFO args: 
+2020-09-27 11:45:54.5601 INFO OnAppStartup
+2020-09-27 11:45:54.6080 INFO args: 
+2020-09-27 11:47:31.8741 INFO OnAppStartup
+2020-09-27 11:47:32.1125 INFO args: 
+2020-09-27 11:49:52.1328 INFO OnAppStartup
+2020-09-27 11:49:52.1757 INFO args: 
+2020-09-27 11:53:33.7492 INFO OnAppStartup
+2020-09-27 11:53:33.7960 INFO args: 
+2020-09-27 11:55:12.1813 INFO OnAppStartup
+2020-09-27 11:55:12.2292 INFO args: 
+2020-09-27 11:55:45.9488 INFO OnAppStartup
+2020-09-27 11:55:45.9927 INFO args: 
+2020-09-27 11:56:43.0280 INFO OnAppStartup
+2020-09-27 11:56:43.0669 INFO args: 
+2020-09-27 11:57:15.1161 INFO OnAppStartup
+2020-09-27 11:57:15.1730 INFO args: 
+2020-09-27 11:58:13.1782 INFO OnAppStartup
+2020-09-27 11:58:13.2380 INFO args: 
+2020-09-27 11:58:22.5712 ERROR System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 MvvmlightWpfApp.ViewModel.LoginViewModel.ExcuteCancelClickCommand(SYS_USER e) 位置 D:\MvvmlightWpfApp\ViewModel\LoginViewModel.cs:行号 161
+   在 MvvmlightWpfApp.ViewModel.LoginViewModel.<get_CancelClickCommand>b__20_0(SYS_USER e) 位置 D:\MvvmlightWpfApp\ViewModel\LoginViewModel.cs:行号 68
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 GalaSoft.MvvmLight.Helpers.WeakAction`1.Execute(T parameter)
+   在 GalaSoft.MvvmLight.Command.RelayCommand`1.Execute(Object parameter)
+   在 MS.Internal.Commands.CommandHelpers.CriticalExecuteCommandSource(ICommandSource commandSource, Boolean userInitiated)
+   在 System.Windows.Controls.Primitives.ButtonBase.OnClick()
+   在 System.Windows.Controls.Button.OnClick()
+   在 System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(MouseButtonEventArgs e)
+   在 System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)
+   在 System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   在 System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   在 System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   在 System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   在 System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)
+   在 System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)
+   在 System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   在 System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   在 System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   在 System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   在 System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   在 System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)
+   在 System.Windows.Input.InputManager.ProcessStagingArea()
+   在 System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   在 System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)
+   在 System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)
+   在 System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, WindowMessage msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+2020-09-27 11:59:17.6483 INFO OnAppStartup
+2020-09-27 11:59:17.6962 INFO args: 
+2020-09-27 12:02:01.6715 INFO OnAppStartup
+2020-09-27 12:02:01.7433 INFO args: 
+2020-09-27 12:03:43.2704 INFO OnAppStartup
+2020-09-27 12:03:43.3213 INFO args: 
+2020-09-27 12:04:06.1432 INFO OnAppStartup
+2020-09-27 12:04:06.1811 INFO args: 
+2020-09-27 12:04:49.1380 INFO OnAppStartup
+2020-09-27 12:04:49.1928 INFO args: 
+2020-09-27 12:05:09.3531 INFO OnAppStartup
+2020-09-27 12:05:09.4020 INFO args: 
+2020-09-27 12:07:38.5490 INFO OnAppStartup
+2020-09-27 12:07:38.6068 INFO args: 
+2020-09-27 12:07:58.9211 INFO OnAppStartup
+2020-09-27 12:07:58.9660 INFO args: 
+2020-09-27 12:14:53.2081 INFO OnAppStartup
+2020-09-27 12:14:53.2829 INFO args: 
+2020-09-27 12:15:13.7412 INFO OnAppStartup
+2020-09-27 12:15:13.7950 INFO args: 
+2020-09-27 12:15:43.9569 INFO OnAppStartup
+2020-09-27 12:15:44.0178 INFO args: 
+2020-09-27 12:33:40.3064 INFO OnAppStartup
+2020-09-27 12:33:40.3892 INFO args: 
+2020-09-27 12:34:41.4283 INFO OnAppStartup
+2020-09-27 12:34:41.5231 INFO args: 
+2020-09-27 12:35:14.5625 INFO OnAppStartup
+2020-09-27 12:35:14.6433 INFO args: 
+2020-09-27 12:48:17.1880 INFO OnAppStartup
+2020-09-27 12:48:17.2419 INFO args: 
+2020-09-27 13:01:53.1025 INFO OnAppStartup
+2020-09-27 13:01:53.1614 INFO args: 
+2020-09-27 13:02:21.8403 INFO OnAppStartup
+2020-09-27 13:02:21.8892 INFO args: 
+2020-09-27 13:06:01.7199 INFO OnAppStartup
+2020-09-27 13:06:01.7768 INFO args: 
+2020-09-27 13:06:35.2387 INFO OnAppStartup
+2020-09-27 13:06:35.2756 INFO args: 
+2020-09-27 13:08:17.7060 INFO OnAppStartup
+2020-09-27 13:08:17.7559 INFO args: 
+2020-09-27 13:10:23.6141 INFO OnAppStartup
+2020-09-27 13:10:23.6909 INFO args: 
+2020-09-27 13:12:39.4200 INFO OnAppStartup
+2020-09-27 13:12:39.4889 INFO args: 
+2020-09-27 13:14:27.6756 INFO OnAppStartup
+2020-09-27 13:14:27.7324 INFO args: 
+2020-09-27 13:15:06.5985 INFO OnAppStartup
+2020-09-27 13:15:06.7082 INFO args: 
+2020-09-27 13:15:37.5011 INFO OnAppStartup
+2020-09-27 13:15:37.5719 INFO args: 
+2020-09-27 13:18:12.9053 INFO OnAppStartup
+2020-09-27 13:18:12.9512 INFO args: 
+2020-09-27 13:18:45.6055 INFO OnAppStartup
+2020-09-27 13:18:45.6583 INFO args: 
+2020-09-27 13:31:01.0665 INFO OnAppStartup
+2020-09-27 13:31:01.1193 INFO args: 
+2020-09-27 13:31:43.7032 INFO OnAppStartup
+2020-09-27 13:31:43.7680 INFO args: 
+2020-09-27 13:34:36.9320 INFO OnAppStartup
+2020-09-27 13:34:36.9909 INFO args: 
+2020-09-27 13:36:04.1326 INFO OnAppStartup
+2020-09-27 13:36:04.1985 INFO args: 
+2020-09-27 13:39:52.8843 INFO OnAppStartup
+2020-09-27 13:39:52.9561 INFO args: 
+2020-09-27 13:50:04.0153 INFO OnAppStartup
+2020-09-27 13:50:04.0731 INFO args: 
+2020-09-27 13:52:00.8850 INFO OnAppStartup
+2020-09-27 13:52:01.0546 INFO args: 
+2020-09-27 13:52:56.2082 INFO OnAppStartup
+2020-09-27 13:52:56.2661 INFO args: 
+2020-09-27 13:56:11.5450 INFO OnAppStartup
+2020-09-27 13:56:11.5939 INFO args: 
+2020-09-27 14:00:34.3857 INFO OnAppStartup
+2020-09-27 14:00:34.4366 INFO args: 
+2020-09-27 14:20:34.2907 INFO OnAppStartup
+2020-09-27 14:20:34.3765 INFO args: 
+2020-09-27 14:21:29.4438 INFO OnAppStartup
+2020-09-27 14:21:29.4837 INFO args: 
+2020-09-27 14:22:16.9052 INFO OnAppStartup
+2020-09-27 14:22:16.9521 INFO args: 
+2020-09-27 14:22:52.5436 INFO OnAppStartup
+2020-09-27 14:22:52.6145 INFO args: 
+2020-09-27 14:23:24.5592 INFO OnAppStartup
+2020-09-27 14:23:24.6140 INFO args: 
+2020-09-27 14:24:04.5849 INFO OnAppStartup
+2020-09-27 14:24:04.6288 INFO args: 
+2020-09-27 14:25:58.3367 INFO OnAppStartup
+2020-09-27 14:25:58.3796 INFO args: 
+2020-09-27 14:27:00.9980 INFO OnAppStartup
+2020-09-27 14:27:01.0519 INFO args: 
+2020-09-27 14:28:27.3603 INFO OnAppStartup
+2020-09-27 14:28:27.4102 INFO args: 
+2020-09-27 14:28:54.9329 INFO OnAppStartup
+2020-09-27 14:28:54.9788 INFO args: 
+2020-09-27 14:29:57.5145 INFO OnAppStartup
+2020-09-27 14:29:57.5653 INFO args: 
+2020-09-27 14:30:35.6451 INFO OnAppStartup
+2020-09-27 14:30:35.6900 INFO args: 
+2020-09-27 14:33:06.5904 INFO OnAppStartup
+2020-09-27 14:33:06.6552 INFO args: 
+2020-09-27 14:34:02.8895 INFO OnAppStartup
+2020-09-27 14:34:02.9314 INFO args: 
+2020-09-27 14:39:27.1948 INFO OnAppStartup
+2020-09-27 14:39:27.2507 INFO args: 
+2020-09-27 14:39:49.7457 INFO OnAppStartup
+2020-09-27 14:39:49.8215 INFO args: 
+2020-09-27 14:41:09.1167 INFO OnAppStartup
+2020-09-27 14:41:09.1665 INFO args: 
+2020-09-27 14:46:22.1879 INFO OnAppStartup
+2020-09-27 14:46:22.2417 INFO args: 
+2020-09-27 14:50:37.4933 INFO OnAppStartup
+2020-09-27 14:50:37.5721 INFO args: 
+2020-09-27 14:51:19.6239 INFO OnAppStartup
+2020-09-27 14:51:19.6618 INFO args: 
+2020-09-27 14:58:12.5306 INFO OnAppStartup
+2020-09-27 14:58:12.5934 INFO args: 
+2020-09-27 14:58:15.3710 ERROR System.OutOfMemoryException: 没有足够的内存继续执行程序。
+   在 System.Windows.Media.Composition.DUCE.Channel.SyncFlush()
+   在 System.Windows.Media.MediaContext.CompleteRender()
+   在 System.Windows.Interop.HwndTarget.OnResize()
+   在 System.Windows.Interop.HwndTarget.HandleMessage(WindowMessage msg, IntPtr wparam, IntPtr lparam)
+   在 System.Windows.Interop.HwndSource.HwndTargetFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+2020-09-27 14:58:15.4398 ERROR System.OutOfMemoryException: 没有足够的内存继续执行程序。
+   在 System.Windows.Media.Composition.DUCE.Channel.SyncFlush()
+   在 System.Windows.Media.MediaContext.NotifySyncModeStatus(Int32 enabledResult)
+   在 System.Windows.Media.MediaContext.NotifyChannelMessage()
+   在 System.Windows.Media.MediaContextNotificationWindow.MessageFilter(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   在 MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   在 System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   在 System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+2020-09-27 14:58:52.4080 INFO OnAppStartup
+2020-09-27 14:58:52.4539 INFO args: 
+2020-09-27 14:59:15.5265 INFO OnAppStartup
+2020-09-27 14:59:15.5704 INFO args: 
+2020-09-27 15:01:10.6976 INFO OnAppStartup
+2020-09-27 15:01:10.7495 INFO args: 
+2020-09-27 15:12:58.4052 INFO OnAppStartup
+2020-09-27 15:12:58.4600 INFO args: 
+2020-09-27 15:14:11.8316 INFO OnAppStartup
+2020-09-27 15:14:11.8915 INFO args: 
+2020-09-27 15:15:02.6277 INFO OnAppStartup
+2020-09-27 15:15:02.6915 INFO args: 
+2020-09-27 16:44:12.8079 INFO OnAppStartup
+2020-09-27 16:44:12.8458 INFO args: 
+2020-09-27 16:46:51.8380 INFO OnAppStartup
+2020-09-27 16:46:51.8799 INFO args: 
+2020-09-27 16:53:14.3186 INFO OnAppStartup
+2020-09-27 16:53:14.3784 INFO args: 
+2020-09-27 16:53:33.3611 INFO OnAppStartup
+2020-09-27 16:53:33.3921 INFO args: 
+2020-09-27 16:56:11.8274 INFO OnAppStartup
+2020-09-27 16:56:11.8683 INFO args: 
+2020-09-27 16:56:20.7911 INFO OnAppExit
+2020-09-27 16:56:27.2280 INFO OnAppStartup
+2020-09-27 16:56:27.2819 INFO args: 
+2020-09-27 16:56:32.8114 INFO OnAppExit
+2020-09-27 16:56:37.4843 INFO OnAppStartup
+2020-09-27 16:56:37.5301 INFO args: 
+2020-09-27 16:56:43.5401 INFO OnAppExit
+2020-09-27 17:01:38.1996 INFO OnAppStartup
+2020-09-27 17:01:38.2385 INFO args: 
+2020-09-27 17:01:45.0603 INFO OnAppExit
+2020-09-27 17:23:56.1609 INFO OnAppStartup
+2020-09-27 17:23:56.1988 INFO args: 
+2020-09-27 17:24:01.7482 INFO OnAppExit
+2020-09-27 18:10:36.9316 INFO OnAppStartup
+2020-09-27 18:10:36.9954 INFO args: 
+2020-09-27 18:10:48.4956 INFO OnAppExit
+2020-09-27 18:10:55.2583 INFO OnAppStartup
+2020-09-27 18:10:55.3211 INFO args: 
+2020-09-27 18:11:03.1794 INFO OnAppExit
+2020-09-27 18:15:56.7209 INFO OnAppStartup
+2020-09-27 18:15:56.7648 INFO args: 
+2020-09-27 18:16:03.3520 INFO OnAppExit
+2020-09-27 18:16:36.4997 INFO OnAppStartup
+2020-09-27 18:16:36.5363 INFO args: 
+2020-09-27 18:16:38.7318 INFO OnAppExit
+2020-09-27 18:17:49.4401 INFO OnAppStartup
+2020-09-27 18:17:49.4780 INFO args: 
+2020-09-27 18:17:53.7788 INFO OnAppExit
+2020-09-27 18:18:38.7143 INFO OnAppStartup
+2020-09-27 18:18:38.7532 INFO args: 
+2020-09-27 18:18:42.5146 INFO OnAppExit
+2020-09-27 18:19:14.6211 INFO OnAppStartup
+2020-09-27 18:19:14.6640 INFO args: 
+2020-09-27 18:19:49.7474 INFO OnAppStartup
+2020-09-27 18:19:49.7902 INFO args: 
+2020-09-27 18:19:54.5769 INFO OnAppExit
+2020-09-27 18:33:04.2391 INFO OnAppStartup
+2020-09-27 18:33:04.2820 INFO args: 
+2020-09-27 18:33:08.6896 INFO OnAppExit
+2020-09-27 18:33:13.9500 INFO OnAppStartup
+2020-09-27 18:33:13.9998 INFO args: 
+2020-09-27 18:36:38.7608 INFO OnAppStartup
+2020-09-27 18:36:38.8097 INFO args: 
+2020-09-27 18:36:43.1320 INFO OnAppExit
+2020-09-27 18:37:33.9401 INFO OnAppStartup
+2020-09-27 18:37:33.9859 INFO args: 
+2020-09-27 18:38:05.8077 INFO OnAppStartup
+2020-09-27 18:38:05.8556 INFO args: 
+2020-09-27 18:47:12.2738 INFO OnAppStartup
+2020-09-27 18:47:12.3167 INFO args: 
+2020-09-27 18:52:07.1171 INFO OnAppStartup
+2020-09-27 18:52:07.1610 INFO args: 
+2020-09-27 18:52:32.9965 INFO OnAppStartup
+2020-09-27 18:52:33.0384 INFO args: 
+2020-09-27 18:54:04.1018 INFO OnAppStartup
+2020-09-27 18:54:04.1426 INFO args: 
+2020-09-27 18:55:13.5705 INFO OnAppStartup
+2020-09-27 18:55:13.6074 INFO args: 
+2020-09-27 18:59:01.8180 INFO OnAppStartup
+2020-09-27 18:59:01.8619 INFO args: 
+2020-09-27 19:03:02.3852 INFO OnAppStartup
+2020-09-27 19:03:02.4330 INFO args: 
+2020-09-27 19:32:12.6109 INFO OnAppStartup
+2020-09-27 19:32:12.6528 INFO args: 

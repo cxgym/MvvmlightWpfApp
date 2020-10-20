@@ -1,0 +1,64 @@
+﻿<UserControl
+    x:Class="MvvmlightWpfApp.Controls.BottompanelControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:local="clr-namespace:MvvmlightWpfApp.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" />
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Unloaded">
+            <cmd:EventToCommand Command="{Binding UnloadedCommand}" PassEventArgsToCommand="True" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <!--<Grid Width="1366" Background="#444444">-->
+    <Grid Background="#444444">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Height="40"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+            <TextBlock
+                Width="100"
+                VerticalAlignment="Center"
+                FontSize="16"
+                Foreground="White"
+                Text="{Binding Timer, Mode=TwoWay}" />
+            <TextBlock
+                Margin="5"
+                VerticalAlignment="Center"
+                FontSize="16"
+                Foreground="White"
+                Text="© 2020 CHENXIN INFORMATION CO., LTD. ALL RIGHTS RESERVED. 陈新信息股份有限公司版权所有" />
+            <Image
+                Width="40"
+                Height="40"
+                Cursor="Hand"
+                Source="pack://application:,,,/MvvmlightWpfApp;component/Resources/Images/icon_dyz.png"
+                Stretch="Fill"
+                ToolTipService.ToolTip="我是可以拖动的哦">
+                <i:Interaction.Behaviors>
+                    <!--  ConstrainToParentBounds="True"这个属性表示拖动的范围受父级元素的约束，这里受StackPanel约束  -->
+                    <ei:MouseDragElementBehavior ConstrainToParentBounds="True" />
+                </i:Interaction.Behaviors>
+            </Image>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC07FE86-C3B0-4731-937F-0CE22A75C5EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MvvmlightWpfApp</RootNamespace>
+    <AssemblyName>MvvmlightWpfApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DllPackages\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=0e453835af4ee6ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DllPackages\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=f46ff315b1088208, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DllPackages\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DllPackages\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.1.1345, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.2.5.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\MicrosoftExpressionInteractions.3.0.40218.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Core.1.0.113.1\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.113.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.113.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DllPackages\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="AttachedDIProperties\GridBorderAttachedProperty.cs" />
+    <Compile Include="Behaviors\MouseDoubleClickCopyTextBehavior.cs" />
+    <Compile Include="Behaviors\ShutdownWindowAnimateBehavior.cs" />
+    <Compile Include="Common\ItemMenu.cs" />
+    <Compile Include="Common\MenuInfoAttribute.cs" />
+    <Compile Include="Common\SubItem.cs" />
+    <Compile Include="Controls\MenuItemControl.xaml.cs">
+      <DependentUpon>MenuItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Fycszm\FycszmDbContext.cs" />
+    <Compile Include="Entity\Fycszm\SYS_GBZCJG.cs" />
+    <Compile Include="Entity\Fycszm\SYS_GENERATE_NUMBER.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_BFDJ.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_CSZMXX.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_FLOW.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_FZDJ.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_HDQD.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_HDQDMX.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_JDFZ.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_JDFZMX.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_JDSY.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_KCMX.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_KCRCKFZYS.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_NDSY.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_RCKDJ.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_SJDJ.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_SLDJ.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_SQXGDJ.cs" />
+    <Compile Include="Entity\Fycszm\TB_CSZM_XSEXX.cs" />
+    <Compile Include="Entity\Fycszm\TB_LXQKJLB.cs" />
+    <Compile Include="Entity\Fycszm\TB_Y_CSZMXX.cs" />
+    <Compile Include="Entity\Fycszm\TB_Y_YQJGDZB.cs" />
+    <Compile Include="Entity\Fysite\FysiteDbContext.cs" />
+    <Compile Include="Entity\Fysite\SYS_AREA.cs" />
+    <Compile Include="Entity\Fysite\SYS_CODE.cs" />
+    <Compile Include="Entity\Fysite\SYS_LOG.cs" />
+    <Compile Include="Entity\Fysite\SYS_MENU.cs" />
+    <Compile Include="Entity\Fysite\SYS_OFFICE.cs" />
+    <Compile Include="Entity\Fysite\SYS_PROXY_URL.cs" />
+    <Compile Include="Entity\Fysite\SYS_ROLE.cs" />
+    <Compile Include="Entity\Fysite\SYS_ROLE_MENU.cs" />
+    <Compile Include="Entity\Fysite\SYS_USER.cs" />
+    <Compile Include="Entity\Fysite\SYS_USER_MENU.cs" />
+    <Compile Include="Entity\Fysite\SYS_USER_ROLE.cs" />
+    <Compile Include="Entity\Fysite\Y_FANGSHI_YUNFU.cs" />
+    <Compile Include="Entity\Fysite\Y_FENMIAN.cs" />
+    <Compile Include="Entity\Fysite\Y_WEICHAN.cs" />
+    <Compile Include="Entity\Fysite\Y_YUNCHANFU.cs" />
+    <Compile Include="Messengers\NotificationMessagerAction.cs" />
+    <Compile Include="Messengers\NotificationMessagerCallback.cs" />
+    <Compile Include="Messengers\NotificationMessagerFunc.cs" />
+    <Compile Include="Messengers\NotificationsToken.cs" />
+    <Compile Include="PropertyChanged\SYS_USER_PropertyChanged.cs" />
+    <Compile Include="Services\CurrentWindowService.cs" />
+    <Compile Include="Services\DispatcherHelper.cs" />
+    <Compile Include="Services\FycszmService.cs" />
+    <Compile Include="Services\Impl\ICurrentWindowService.cs" />
+    <Compile Include="Services\Impl\IDispatcherHelper.cs" />
+    <Compile Include="Services\Impl\IFycszmService.cs" />
+    <Compile Include="Services\Impl\IWindowService.cs" />
+    <Compile Include="Services\Proxy\FycszmServiceProxy.cs" />
+    <Compile Include="Services\WindowService.cs" />
+    <Compile Include="Utilities\AgeHelper.cs" />
+    <Compile Include="Utilities\IniHelper.cs" />
+    <Compile Include="Validates\SYS_USER_Validate.cs" />
+    <Compile Include="ViewModel\BottompanelControlModel.cs" />
+    <Compile Include="ViewModel\Issue\CertificateUsageListViewModel.cs" />
+    <Compile Include="ViewModel\Issue\NeonatusInfoListViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\NavpanelControlModel.cs" />
+    <Compile Include="ViewModel\Statistics\AnnualReportViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="Views\Issue\CertificateUsageListView.xaml.cs">
+      <DependentUpon>CertificateUsageListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Issue\NeonatusInfoListView.xaml.cs">
+      <DependentUpon>NeonatusInfoListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Statistics\AnnualReportView.xaml.cs">
+      <DependentUpon>AnnualReportView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\BottompanelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MenuItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NavpanelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\BottompanelControl.xaml.cs">
+      <DependentUpon>BottompanelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NavpanelControl.xaml.cs">
+      <DependentUpon>NavpanelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\AgeConverter.cs" />
+    <Page Include="Skins\GlobalSkin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\StoryBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Issue\CertificateUsageListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Issue\NeonatusInfoListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Statistics\AnnualReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="DllPackages\CommonServiceLocator.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DllPackages\GalaSoft.MvvmLight.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DllPackages\GalaSoft.MvvmLight.Extras.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DllPackages\GalaSoft.MvvmLight.Platform.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DllPackages\System.Windows.Interactivity.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\fonts\fontawesome-webfont.svg" />
+    <Resource Include="Resources\Images\huanyuan.png" />
+    <Resource Include="Resources\Images\bg.png" />
+    <Resource Include="Resources\Images\bg_dyz.png" />
+    <Resource Include="Resources\Images\icon_denglu123.png" />
+    <Resource Include="Resources\Images\icon_dyz.png" />
+    <Resource Include="Resources\Images\icon_mima123.png" />
+    <Resource Include="Resources\Images\logo_b.png" />
+    <Resource Include="Resources\Images\logo_s.png" />
+    <Resource Include="Resources\Images\maximize.png" />
+    <Resource Include="Resources\Images\minimize.png" />
+    <Resource Include="Resources\Images\restore.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Database\FycszmSQLite.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Database\FysiteSQLite.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\fonts\fontawesome-webfont.eot" />
+    <Resource Include="Resources\fonts\fontawesome-webfont.ttf" />
+    <None Include="Resources\fonts\fontawesome-webfont.woff" />
+    <None Include="Resources\fonts\fontawesome-webfont.woff2" />
+    <Resource Include="Resources\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.113.1\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.113.1\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+  <Import Project="packages\System.Data.SQLite.Core.1.0.113.1\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.113.1\build\net451\System.Data.SQLite.Core.targets')" />
+</Project>

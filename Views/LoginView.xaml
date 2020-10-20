@@ -1,0 +1,154 @@
+﻿<Window
+    x:Class="MvvmlightWpfApp.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:AttachedDIProperties="clr-namespace:MvvmlightWpfApp.AttachedDIProperties"
+    xmlns:Behaviors="clr-namespace:MvvmlightWpfApp.Behaviors"
+    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:local="clr-namespace:MvvmlightWpfApp.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    AllowsTransparency="True"
+    Background="Transparent"
+    DataContext="{Binding Login, Source={StaticResource Locator}}"
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <!--  xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"  -->
+    <!--  xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  -->
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Skins/StoryBoard.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <i:Interaction.Behaviors>
+        <Behaviors:ShutdownWindowAnimateBehavior ShutdownMode="SpinZoom" />
+    </i:Interaction.Behaviors>
+
+    <Canvas
+        x:Name="LoginLayoutRoot"
+        Width="600"
+        Height="400"
+        RenderTransformOrigin="0.5,0.5">
+        <Canvas.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform />
+                <SkewTransform />
+                <RotateTransform />
+                <TranslateTransform />
+            </TransformGroup>
+        </Canvas.RenderTransform>
+        <Grid
+            Canvas.Left="360"
+            Canvas.Top="135"
+            AttachedDIProperties:GridBorderAttachedProperty.ShowBorder="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Margin="3,3,3,0"
+                HorizontalAlignment="Center"
+                Content="妇幼出生证管理系统"
+                FontSize="20"
+                Foreground="#bc5e72" />
+            <Label
+                Grid.Row="1"
+                Margin="3,0,3,0"
+                Padding="0"
+                HorizontalAlignment="Right"
+                HorizontalContentAlignment="Right"
+                Content="{Binding LoginErrorMsg}"
+                Foreground="Red" />
+            <TextBox
+                x:Name="loginname"
+                Grid.Row="2"
+                Width="200"
+                Height="30"
+                Margin="3,0,3,0"
+                Text="{Binding SYS_USER.LOGIN_NAME_PropertyChanged, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+            <TextBox
+                Grid.Row="3"
+                Width="200"
+                Height="30"
+                Margin="3,3,3,0"
+                Text="{Binding SYS_USER.PASSWORD_PropertyChanged, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+            <StackPanel
+                Grid.Row="4"
+                Margin="0,5,0,0"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    Width="60"
+                    Height="30"
+                    Content="双击我"
+                    Foreground="#bc5e72">
+                    <i:Interaction.Behaviors>
+                        <Behaviors:MouseDoubleClickCopyTextBehavior CopyText="{Binding ElementName=loginname, Path=Text}" />
+                    </i:Interaction.Behaviors>
+                </Button>
+                <Button
+                    Width="60"
+                    Height="30"
+                    Margin="10,0,0,0"
+                    Command="{Binding LoginClickCommand}"
+                    Content="登录"
+                    Foreground="#bc5e72" />
+                <Button
+                    Width="60"
+                    Height="30"
+                    Margin="10,0,0,0"
+                    Command="{Binding CancelClickCommand}"
+                    CommandParameter="{Binding SYS_USER}"
+                    Content="取消"
+                    Foreground="#bc5e72" />
+            </StackPanel>
+            <!--<StackPanel
+                Grid.Row="5"
+                Margin="0,5,0,0"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Button
+                    Width="60"
+                    Height="30"
+                    Content="背景淡入"
+                    Foreground="#bc5e72" />
+                <Button
+                    Width="60"
+                    Height="30"
+                    Margin="10,0,0,0"
+                    Content="背景淡出"
+                    Foreground="#bc5e72" />
+            </StackPanel>-->
+        </Grid>
+        <Canvas.Background>
+            <ImageBrush>
+                <ImageBrush.ImageSource>
+                    <BitmapImage UriSource="/MvvmlightWpfApp;component/Resources/Images/bg.png" />
+                </ImageBrush.ImageSource>
+            </ImageBrush>
+        </Canvas.Background>
+    </Canvas>
+</Window>

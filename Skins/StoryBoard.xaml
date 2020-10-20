@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Storyboard x:Key="ShutdownAnimateSpinZoomStoryboard">
+        <DoubleAnimationUsingKeyFrames
+            BeginTime="00:00:00"
+            Storyboard.TargetName="LoginLayoutRoot"
+            Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+            <SplineDoubleKeyFrame
+                KeySpline="0.48,0,1,1"
+                KeyTime="00:00:02"
+                Value="1440" />
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames
+            BeginTime="00:00:00"
+            Storyboard.TargetName="LoginLayoutRoot"
+            Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+            <SplineDoubleKeyFrame
+                KeySpline="0.48,0,1,1"
+                KeyTime="00:00:02"
+                Value="0.1" />
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames
+            BeginTime="00:00:00"
+            Storyboard.TargetName="LoginLayoutRoot"
+            Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+            <SplineDoubleKeyFrame
+                KeySpline="0.48,0,1,1"
+                KeyTime="00:00:02"
+                Value="0.1" />
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames
+            BeginTime="00:00:00"
+            Storyboard.TargetName="LoginLayoutRoot"
+            Storyboard.TargetProperty="(UIElement.Opacity)">
+            <SplineDoubleKeyFrame
+                KeySpline="0.48,0,1,1"
+                KeyTime="00:00:02"
+                Value="0" />
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+</ResourceDictionary>
