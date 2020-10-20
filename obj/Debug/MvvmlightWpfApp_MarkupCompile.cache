@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\MvvmlightWpfApp\obj\Debug\
+D:\Mvvmlight框架\Demo\MvvmlightWpfApp\obj\Debug\
 MvvmlightWpfApp
 none
 false
 DEBUG;TRACE
-D:\MvvmlightWpfApp\App.xaml
+D:\Mvvmlight框架\Demo\MvvmlightWpfApp\App.xaml
 11279864244
 7529703346
 85-284520999
-36-1201458453
+361664559740
 Controls\BottompanelControl.xaml;Controls\MenuItemControl.xaml;Controls\NavpanelControl.xaml;Skins\GlobalSkin.xaml;Skins\StoryBoard.xaml;Skins\TextBox.xaml;Views\Issue\CertificateUsageListView.xaml;Views\Issue\NeonatusInfoListView.xaml;Views\LoginView.xaml;Views\MainView.xaml;Views\Statistics\AnnualReportView.xaml;
 
 False
